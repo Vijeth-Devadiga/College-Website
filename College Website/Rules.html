@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Rules and Regulations</title>
+    <link rel="stylesheet" href="Style.css">
+    <style>   
+    
+        .body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 2rem;
+            margin: 2rem;
+            border-radius: 2rem;
+            background-color: white;
+            line-height: 1.6rem;
+        }
+
+        .body .header {
+            background-color: #000000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 1rem;
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+
+        h2 {
+            margin-top: 30px;
+            border-bottom: 2px solid #444;
+            padding-bottom: 5px;
+            color: #444;
+        }
+
+        p, li {
+            margin: 10px 0;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 600px) {
+            .body {
+                padding: 15px;
+                margin: 15px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+
+            <div class="logo-section">
+                <div class="logo">
+                    <img src="images/dhavala-logo.jpg" alt="fff">
+                </div>
+                <p class="college-name">Sri Dhavala College</p>
+            </div>
+            
+            <nav class="nav-container">
+                <div class="desktop-nav">
+                    <div class="nav-item">
+                        <a href="Index.html" class="nav-link">Home</a>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="Login.html" class="nav-link">Login</a>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#" class="nav-link has-dropdown" data-dropdown="about">About</a>
+                        <div class="dropdown" id="about">
+                            <a href="About.html" class="dropdown-item">About Us</a>
+                            <a href="PrincipalMsg.html" class="dropdown-item">Principal Message</a>
+                            <a href="History.html" class="dropdown-item">College History</a>
+                            <a href="#" class="dropdown-item">Governing Council</a>
+                            <a href="Management.html" class="dropdown-item">Our Management</a>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#" class="nav-link has-dropdown" data-dropdown="facilities">Facilities</a>
+                        <div class="dropdown" id="facilities">
+                            <a href="#" class="dropdown-item">Academic Facilities</a>
+                            <a href="#" class="dropdown-item">Infrastructural Facilities</a>
+                            <a href="#" class="dropdown-item">Other Facilities</a>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#" class="nav-link has-dropdown" data-dropdown="academics">Academics</a>
+                        <div class="dropdown" id="academics">
+                            <a href="Cources.html" class="dropdown-item">Courses Offered</a>
+                            <a href="Academi&ECA.html" class="dropdown-item">Academic & Extracurricular Activities</a>
+                            <a href="#" class="dropdown-item">Annual Magazine - "Prathibha"</a>
+                            <a href="#" class="dropdown-item">Certificate Courses</a>
+                            <a href="Rules.html" class="dropdown-item">College Rules & Regulations</a>
+                            <a href="TimeTable.html" class="dropdown-item">Time Table</a>
+                            <a href="Mentors.html" class="dropdown-item">Mentors</a>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#" class="nav-link">IQAC</a>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#" class="nav-link has-dropdown" data-dropdown="staff">Our Staffs</a>
+                        <div class="dropdown" id="staff">
+                            <a href="Teach.html" class="dropdown-item">Teaching Staff</a>
+                            <a href="Nonteaching.html" class="dropdown-item">Non-Teaching Staff</a>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#" class="nav-link">Activities</a>
+                    </div>
+
+                    <div class="nav-item">
+                        <a href="Contact.html" class="nav-link">Contact Us</a>
+                    </div>
+                </div>
+                
+                <div class="mobile-toggle" id="mobileToggle">
+                    <div class="abc"></div>
+                    <div class="abc"></div>
+                    <div class="abc"></div>
+                </div>
+            </nav>
+        </div>
+        
+        <!-- Mob Navigation -->
+        <div class="mobile-nav" id="mobileNav">
+            <div class="mobile-nav-item">
+                <a href="Index.html" class="mobile-nav-link">Home</a>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <a href="Login.html" class="mobile-nav-link">Login</a>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link" data-mobile-dropdown="mobile-about">About <span>▼</span></a>
+                <div class="mobile-dropdown" id="mobile-about">
+                    <a href="About.html" class="mobile-dropdown-item">About Us</a>
+                    <a href="PrincipalMsg.html" class="mobile-dropdown-item">Principal Message</a>
+                    <a href="History.html" class="mobile-dropdown-item">College History</a>
+                    <a href="#" class="mobile-dropdown-item">Governing Council</a>
+                    <a href="Management.html" class="mobile-dropdown-item">Our Management</a>
+                </div>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link" data-mobile-dropdown="mobile-facilities">Facilities <span>▼</span></a>
+                <div class="mobile-dropdown" id="mobile-facilities">
+                    <a href="#" class="mobile-dropdown-item">Academic Facilities</a>
+                    <a href="#" class="mobile-dropdown-item">Infrastructural Facilities</a>
+                    <a href="#" class="mobile-dropdown-item">Other Facilities</a>
+                </div>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link" data-mobile-dropdown="mobile-academics">Academics <span>▼</span></a>
+                <div class="mobile-dropdown" id="mobile-academics">
+                    <a href="Cources.html" class="mobile-dropdown-item">Courses Offered</a>
+                    <a href="Academi&ECA.html" class="mobile-dropdown-item">Academic & Extracurricular Activities</a>
+                    <a href="#" class="mobile-dropdown-item">Annual Magazine - "Prathibha"</a>
+                    <a href="#" class="mobile-dropdown-item">Certificate Courses</a>
+                    <a href="Rules.html" class="mobile-dropdown-item">College Rules & Regulations</a>
+                    <a href="TimeTable.html" class="mobile-dropdown-item">Time Table</a>
+                    <a href="Mentors.html" class="mobile-dropdown-item">Mentors</a>
+                </div>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link">IQAC</a>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link" data-mobile-dropdown="mobile-staff">Our Staffs <span>▼</span></a>
+                <div class="mobile-dropdown" id="mobile-staff">
+                    <a href="Teach.html" class="mobile-dropdown-item">Teaching Staff</a>
+                    <a href="Nonteaching.html" class="mobile-dropdown-item">Non-Teaching Staff</a>
+                </div>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link">Activities</a>
+            </div>
+
+            
+            <div class="mobile-nav-item">
+                <a href="Contact.html" class="mobile-nav-link">Contact Us</a>
+            </div>       
+        </div>
+    </header>
+
+
+    <div class="body">
+        <section class="header">
+            <h1>COLLEGE RULES AND REGULATIONS</h1>
+            <p>“The path of duty is the way to glory”</p>
+        </section> 
+
+        <main>
+            <section>
+                <p>Discipline, an integral part of education, is of prime importance in this college. Hence students are informed to strictly adhere to the rules and regulations given below:</p>
+            </section>
+            <section>
+                <h2>College Uniform and Identity Card</h2>
+                <p>All the students of the college must wear the uniform on all working days of the college except on Wednesdays. A student who is found not wearing the official uniform will be fined Rs. 100/-. All the students must wear the uniform in proper manner. The college uniform must be stitched as per the design stated by the college, using garment provided by the college and stitched by the authorized tailor of the college. If found not wearing the uniform, as per the guidelines, he/she will re-stitch the uniform. Any student found not wearing the uniform, has to pay a fine in the office, show the receipt to the concerned teacher before he/she is allowed to the class.</p>
+                <p>Students attending class or other gatherings in the college campus are expected to be neatly dressed in accordance with the rules of approved etiquette and manners. During reading holidays and non-working days, all students will enter the college campus only in formal dress. No student will enter the college campus without the formal dress, i.e. jeans, T-shirt etc. are not permitted. Even during College/Institutional celebrations, jeans/T-shirts are not permitted. During the non-working days, even the girls shall wear chudidhara/Khameez/saris.</p>
+                <p>Every student should wear his identity card issued by the college which should be produced whenever asked for.</p>
+            </section>
+
+            <section>
+                <h2>Use of Mobile Phones</h2>
+                <p>No student shall bring mobiles/cell phones to the college campus/classrooms even during the non-working days and for any function in the college.</p>
+                <p>A student who brings mobile/ cell phone to the college campus/classroom will be fined with Rs. 500 at the first instance; in the second instance, mobile will be seized along with a fine of Rs.1000 and mobile will be returned at the end of the course.</p>
+            </section>
+
+            <section>
+                <h2>Internal Assessment Examinations</h2>
+                <p>Two tests for internal assessment will be conducted in each semester and they will be of two hours duration each. If a student fails to appear for any of the tests for a valid reason as judged by Discipline Committee he/she will be given a chance to appear for another test of 2 hours duration in September/ March on payment of prescribed fees of Rs.100 per subject.</p>
+                <p>All the students are expected to be present for all the examinations without fail. Absentees will not be permitted for the re-examination without prior approval of the Discipline Committee. Only serious medical grounds/emergencies and the like will be considered for re-examination.</p>
+                <p>The progress report of the student who is poor in studies will be sent to their parents/guardians at the end of each internal assessment test and should be returned to the concerned class teacher after affixing their signature thereon.</p>
+            </section>
+
+            <section>
+                <h2>College Timings and Classroom Discipline</h2>
+                <p>At 9.15 am and at 1.15 pm first bell will be given. Soon after the first bell students shall move to their respective class rooms silently and shall wait for the lecturer who will enter the class soon after the second bell (third bell in the afternoon). After the prayer in the morning session, the classes will commence.</p>
+                <p>Allowing the late comers to the class room or marking present will be the discretion of the concerned lecturer. No student shall leave the class room in the middle of the class hours except with the permission of the lecturer concerned.</p>
+                <p>The lecturer has every right to send any student out of the class room for valid reason. However he will report the matter to the Principal at the earliest. The lecturers are empowered to instruct any student to change his seat without assigning any reason.</p>
+                <p>Students are not allowed to loiter in the college campus or corridors unnecessarily. Whistling, making obscene sounds, raising the voice, arguing/quarrelling in the corridor and campus is strictly prohibited, especially during lunch break. Students are expected to spend their free time in the library/ games room or with the lecturers discussing the subject.</p>
+                <p>Students are not permitted to smoke and use tobacco in any form or eat chewing gum. They are also forbidden to bring video games gadgets, transistor radio, cell/cordless phones, musical instruments etc., to the college. Consumption of alcohol in the campus or entering college campus after alcohol consumption shall be an offence, punishable even with suspension or dismissal from the college.</p>
+                <p>Students are advised not to bring heavy cash or valuables to the college.</p>
+            </section>
+
+            <section>
+                <h2>Act of Misbehavior and Disciplinary Action</h2>
+                <p>Causing disturbance within the college premises, library, reading room, common-room, Play ground, diverting attention of the students from the lecturers or a teacher from teaching, insubordination and disrespect to the teacher within or outside college, habitual inattention to class work, frequent absence, disturbing class from outside, loitering in the corridors, making noise and disturbing the classes, picking a quarrel with the staff or with other students, and any other act which the Principal may deem as an act of indiscipline.</p>
+                <p>Punishment for these acts of indiscipline may range from issue of warning, suspension from class and keeping the offender out of class for a specific period by concerned lecturers, imposition of fine or even suspension from the college for a period of seven working days by the Principal.</p>
+                <p>Repetition of acts of indiscipline inspite of repeated warnings and penalties imposed, attending the college dressed in a manner contrary to the social norms prevailing from time to time, indecent exposure in provocative manner, disfiguring the walls, floors, furniture etc. of the college by writing offensive and indecent slogans, destruction of college property, instigating others to commit acts of indiscipline, organization of movements subversive of the discipline of the college, physical intimidation of law-abiding students, indulging in criminal acts of any kind, rousing communal and caste feeling among students, demonstration of disloyalty to the country, its Constitution and its flag, ragging of any kind tending to cause physical and mental torture, attending the college in a drunken state, bringing to the college instruments like whistles, toys with the intention of causing noise and disturbing the peace of the college, bringing and playing cassettes or radio inside the class or outside the class hours, smoking in the college campus or any other act or acts which the Principal may consider as major acts of indiscipline.</p>
+                <p>Students indulging in these major acts of indiscipline are liable to be suspended from the college or the parents/guardians may be asked to withdraw the student from the college or may decide on rustication of the student. Students indulging in these major acts of indiscipline are enquired thoroughly by the Discipline Committee of the college and the nature of punishment is decided by the Discipline Committee.</p>
+                <p>Student shall not join clubs, associations or organizations, the activities of which may interfere with their regular studies in the college with out the permission of the principal.</p>
+                <p>No student will be allowed to bring two-wheeler or four wheeler to the college campus without the permission of the Principal. If it is to be brought, a request letter from their parents to the Principal with a copy of RTO license must be submitted.</p>
+                <p>The students are not permitted to celebrate any religious festivals/arrange class gathering/class picnic/get-together/collect donations from public or classmates without permission of the Principal.</p>
+            </section>
+
+            <section>
+                <h2>Attendance and Leave</h2>
+                <p>A student will attend all the classes of the day. No student will leave class in between, without the permission of the concerned class teacher. If he/she wants to leave in between class hours the student must get permission from the concerned class teacher/Principal.</p>
+                <p>Leave Note / an entry for leave in the college calendar must be shown to the Class Teacher first and with his signature, it must be shown to all concerned subject teachers, before attending the class. In case of absence for more than two days, a Leave Note signed by the parent must be shown to the Principal first and with his signature, it must be shown to all concerned subject teachers, before attending the class. The leave notes are very important as they will stand as the proof of their attendance. In case of illness students should produce a medical certificate.</p>
+                <p>Absentees should justify their absence with the Principal/ concerned lecturer before attending next class or on the subsequent day and compulsorily record the reason for absence in their calendar.</p>
+                <p>Students are required to attend not less than 75% of the total number of classes actually held during the semester in each of the subjects. However when there are genuine and valid reasons, if the attendance is 60% and above but below 75% the Principal may recommend to the university for condonation of the shortage after collecting the prescribed University fine.</p>
+                <p>A student who does not satisfy the requirement of attendance even in one subject shall not be permitted to take the whole University Examination of the year and he/she shall be required to repeat the course in the subsequent year.</p>
+                <p>The students are at liberty to contact their teachers to know about their attendance status. List of students having shortage of attendance will be displayed on the college notice board every month. Parents will be informed in writing if students having shortage of attendance do not show improvement in attendance. It is very important that the parents constantly monitor the attendance/progress of their children.</p>
+            </section>
+
+            <section>
+                <h2>Study Tour and Project Work</h2>
+                <p>The lecturers may arrange educational tours to historical, cultural or industrial areas. By attending these tours the students will have a practical knowledge of the subject taught in the class-room. Strict discipline and serious involvement is expected of the students in these tours.</p>
+                <p>Picnics and educational tours are to be organized with the prior permission of the Principal. Parent’s permission letter must be submitted by students who attend such programmes.</p>
+            </section>
+
+        </main>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="header">
+                <h1 class="title">SRI DHAVALA COLLEGE</h1>
+                <div class="description">
+                    <p>Moodabidri - 574227, Moodabidri Taluk, D.K.District, Karnataka</p>
+                    <p>Managed by Shree Moodubidire Digambar Jain Vidyavardhaka Sangha®, Moodabidri</p>
+                    <p>Recognized under section 2(f) and 12(B) of UGC Act 1956, Affiliated to Mangalore University</p>
+                    <span class="badge">Re-accredited by NAAC with Grade B++ (CGPA 2.81)</span>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="section">
+                    <h3>Get in Touch</h3>
+                    <div class="contact-item">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                        <div>
+                            <b>Principal</b><br>
+                            Sri Dhavala College<br>
+                            Moodabidri-574227
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        <div>
+                            <b>Phone</b><br>
+                            +91 8258 200243
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                        <div>
+                            <b>Email</b><br>
+                            sridhavalacollege1979@gmail.com
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Quick Links</h3>
+                    <ul class="links">
+                        <li><a href="#programs">PROGRAMS</a></li>
+                        <li><a href="#academics">ACADEMICS</a></li>
+                        <li><a href="#facilities">FACILITIES</a></li>
+                        <li><a href="#iqac">IQAC</a></li>
+                        <li><a href="#staff">OUR STAFF</a></li>
+                        <li><a href="#activities">ACTIVITIES</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Follow Us</h3>
+                    <div class="social">
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom">
+                <p>&copy; 2025 Sri Dhavala College, Moodabidri. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Script.js"></script>
+    
+</body>
+</html>

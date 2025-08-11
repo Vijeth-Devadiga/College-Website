@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic and Extra-Curricular Activities 2025-26</title>
+    <link rel="stylesheet" href="Style.css">
+    <style>
+        .eca-container {
+            max-width: 95vw;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .eca-container .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .eca-container .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .eca-container .header h2 {
+            font-size: 1.8em;
+            color: #bdc3c7;
+            font-weight: 400;
+        }
+
+        .eca-container .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .eca-container .activity-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid #2c3e50;
+        }
+
+        .eca-container .activity-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+
+        .eca-container .activity-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+
+        .eca-container .faculty-list {
+            list-style: none;
+        }
+
+        .eca-container .faculty-item {
+            background: #f8f9fa;
+            padding: 10px 15px;
+            margin-bottom: 8px;
+            border-radius: 5px;
+            border-left: 3px solid #95a5a6;
+            font-size: 0.95em;
+        }
+
+        .eca-container .coordinator {
+            background: #e8f5e8;
+            border-left-color: #27ae60;
+            font-weight: 500;
+        }
+
+        .eca-container .faculty-name {
+            color: #2c3e50;
+        }
+
+        .eca-container .role-badge {
+            display: inline-block;
+            background: #34495e;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            margin-left: 10px;
+        }
+
+        .eca-container .coordinator-badge {
+            background: #27ae60;
+        }
+
+        .eca-container .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background: #2c3e50;
+            color: white;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .eca-container .activities-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .eca-container .header h1 {
+                font-size: 2em;
+            }
+            
+            .eca-container .header h2 {
+                font-size: 1.4em;
+            }
+            
+            .eca-container .activity-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+
+            <div class="logo-section">
+                <div class="logo">
+                    <img src="images/dhavala-logo.jpg" alt="fff">
+                </div>
+                <p class="college-name">Sri Dhavala College</p>
+            </div>
+            
+            <nav class="nav-container">
+                <div class="desktop-nav">
+                    <div class="nav-item">
+                        <a href="Index.html" class="nav-link">Home</a>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="Login.html" class="nav-link">Login</a>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#" class="nav-link has-dropdown" data-dropdown="about">About</a>
+                        <div class="dropdown" id="about">
+                            <a href="About.html" class="dropdown-item">About Us</a>
+                            <a href="PrincipalMsg.html" class="dropdown-item">Principal Message</a>
+                            <a href="History.html" class="dropdown-item">College History</a>
+                            <a href="#" class="dropdown-item">Governing Council</a>
+                            <a href="Management.html" class="dropdown-item">Our Management</a>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#" class="nav-link has-dropdown" data-dropdown="facilities">Facilities</a>
+                        <div class="dropdown" id="facilities">
+                            <a href="#" class="dropdown-item">Academic Facilities</a>
+                            <a href="#" class="dropdown-item">Infrastructural Facilities</a>
+                            <a href="#" class="dropdown-item">Other Facilities</a>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#" class="nav-link has-dropdown" data-dropdown="academics">Academics</a>
+                        <div class="dropdown" id="academics">
+                            <a href="Cources.html" class="dropdown-item">Courses Offered</a>
+                            <a href="Academi&ECA.html" class="dropdown-item">Academic & Extracurricular Activities</a>
+                            <a href="#" class="dropdown-item">Annual Magazine - "Prathibha"</a>
+                            <a href="#" class="dropdown-item">Certificate Courses</a>
+                            <a href="Rules.html" class="dropdown-item">College Rules & Regulations</a>
+                            <a href="TimeTable.html" class="dropdown-item">Time Table</a>
+                            <a href="Mentors.html" class="dropdown-item">Mentors</a>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#" class="nav-link">IQAC</a>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#" class="nav-link has-dropdown" data-dropdown="staff">Our Staffs</a>
+                        <div class="dropdown" id="staff">
+                            <a href="Teach.html" class="dropdown-item">Teaching Staff</a>
+                            <a href="Nonteaching.html" class="dropdown-item">Non-Teaching Staff</a>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#" class="nav-link">Activities</a>
+                    </div>
+
+                    <div class="nav-item">
+                        <a href="Contact.html" class="nav-link">Contact Us</a>
+                    </div>
+                </div>
+                
+                <div class="mobile-toggle" id="mobileToggle">
+                    <div class="abc"></div>
+                    <div class="abc"></div>
+                    <div class="abc"></div>
+                </div>
+            </nav>
+        </div>
+        
+        <!-- Mob Navigation -->
+        <div class="mobile-nav" id="mobileNav">
+            <div class="mobile-nav-item">
+                <a href="Index.html" class="mobile-nav-link">Home</a>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <a href="Login.html" class="mobile-nav-link">Login</a>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link" data-mobile-dropdown="mobile-about">About <span>▼</span></a>
+                <div class="mobile-dropdown" id="mobile-about">
+                    <a href="About.html" class="mobile-dropdown-item">About Us</a>
+                    <a href="PrincipalMsg.html" class="mobile-dropdown-item">Principal Message</a>
+                    <a href="History.html" class="mobile-dropdown-item">College History</a>
+                    <a href="#" class="mobile-dropdown-item">Governing Council</a>
+                    <a href="Management.html" class="mobile-dropdown-item">Our Management</a>
+                </div>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link" data-mobile-dropdown="mobile-facilities">Facilities <span>▼</span></a>
+                <div class="mobile-dropdown" id="mobile-facilities">
+                    <a href="#" class="mobile-dropdown-item">Academic Facilities</a>
+                    <a href="#" class="mobile-dropdown-item">Infrastructural Facilities</a>
+                    <a href="#" class="mobile-dropdown-item">Other Facilities</a>
+                </div>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link" data-mobile-dropdown="mobile-academics">Academics <span>▼</span></a>
+                <div class="mobile-dropdown" id="mobile-academics">
+                    <a href="Cources.html" class="mobile-dropdown-item">Courses Offered</a>
+                    <a href="Academi&ECA.html" class="mobile-dropdown-item">Academic & Extracurricular Activities</a>
+                    <a href="#" class="mobile-dropdown-item">Annual Magazine - "Prathibha"</a>
+                    <a href="#" class="mobile-dropdown-item">Certificate Courses</a>
+                    <a href="Rules.html" class="mobile-dropdown-item">College Rules & Regulations</a>
+                    <a href="TimeTable.html" class="mobile-dropdown-item">Time Table</a>
+                    <a href="Mentors.html" class="mobile-dropdown-item">Mentors</a>
+                </div>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link">IQAC</a>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link" data-mobile-dropdown="mobile-staff">Our Staffs <span>▼</span></a>
+                <div class="mobile-dropdown" id="mobile-staff">
+                    <a href="Teach.html" class="mobile-dropdown-item">Teaching Staff</a>
+                    <a href="Nonteaching.html" class="mobile-dropdown-item">Non-Teaching Staff</a>
+                </div>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link">Activities</a>
+            </div>
+
+            
+            <div class="mobile-nav-item">
+                <a href="Contact.html" class="mobile-nav-link">Contact Us</a>
+            </div>       
+        </div>
+    </header>
+
+
+    <div class="eca-container">
+        <div class="header">
+            <h1>ACADEMIC AND EXTRA-CURRICULAR ACTIVITIES</h1>
+            <h2>2025-26</h2>
+        </div>
+
+        <div class="activities-grid">
+            <div class="activity-card">
+                <h3 class="activity-title">1. Students' Council</h3>
+                <ul class="faculty-list">
+                    <li class="faculty-item coordinator">
+                        <span class="faculty-name">Sri Praveen C Kulkarni</span>
+                        <span class="role-badge coordinator-badge">Co-ordinator</span>
+                    </li>
+                    <li class="faculty-item">
+                        <span class="faculty-name">Sri Aravinda Prasad</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <h3 class="activity-title">2. Anti Ragging Committee</h3>
+                <ul class="faculty-list">
+                    <li class="faculty-item coordinator">
+                        <span class="faculty-name">Sri. Praveen C Kulkarni</span>
+                        <span class="role-badge coordinator-badge">Co-ordinator</span>
+                    </li>
+                    <li class="faculty-item">
+                        <span class="faculty-name">Sri Santhosh</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <h3 class="activity-title">3. Anti Drug Cell</h3>
+                <ul class="faculty-list">
+                    <li class="faculty-item coordinator">
+                        <span class="faculty-name">Dr. Padmaja Shetty</span>
+                        <span class="role-badge coordinator-badge">Co-ordinator</span>
+                    </li>
+                    <li class="faculty-item">
+                        <span class="faculty-name">Smt. Shilpalatha</span>
+                    </li>
+                    <li class="faculty-item">
+                        <span class="faculty-name">Sri. Rahul</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <h3 class="activity-title">4. Literary Association, Wall Magazine & Annual Magazine Committee</h3>
+                <ul class="faculty-list">
+                    <li class="faculty-item coordinator">
+                        <span class="faculty-name">Smt Sukanya S Shetty</span>
+                        <span class="role-badge coordinator-badge">Co-ordinator</span>
+                    </li>
+                    <li class="faculty-item">
+                        <span class="faculty-name">Smt. Mallika N</span>
+                    </li>
+                    <li class="faculty-item">
+                        <span class="faculty-name">Dr Padmaja Shetty</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <h3 class="activity-title">5. Examination Committee</h3>
+                <ul class="faculty-list">
+                    <li class="faculty-item coordinator">
+                        <span class="faculty-name">Sri. Rahul</span>
+                        <span class="role-badge coordinator-badge">Co-ordinator</span>
+                    </li>
+                    <li class="faculty-item">
+                        <span class="faculty-name">Smt. Yashoda</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <h3 class="activity-title">6. Arts Association</h3>
+                <ul class="faculty-list">
+                    <li class="faculty-item coordinator">
+                        <span class="faculty-name">Dr. Roopa K</span>
+                        <span class="role-badge coordinator-badge">Co-ordinator</span>
+                    </li>
+                    <li class="faculty-item">
+                        <span class="faculty-name">Smt. Shilpalatha</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <h3 class="activity-title">7. Commerce Association</h3>
+                <ul class="faculty-list">
+                    <li class="faculty-item coordinator">
+                        <span class="faculty-name">Sri Rahul</span>
+                        <span class="role-badge coordinator-badge">Co-ordinator</span>
+                    </li>
+                    <li class="faculty-item">
+                        <span class="faculty-name">Sri Taranath</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <h3 class="activity-title">8. Human Rights Association</h3>
+                <ul class="faculty-list">
+                    <li class="faculty-item coordinator">
+                        <span class="faculty-name">Sri Santhosh</span>
+                        <span class="role-badge coordinator-badge">Co-ordinator</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <h3 class="activity-title">9. Heritage Club</h3>
+                <ul class="faculty-list">
+                    <li class="faculty-item coordinator">
+                        <span class="faculty-name">Smt. Shilpalatha</span>
+                        <span class="role-badge coordinator-badge">Co-ordinator</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <h3 class="activity-title">10. Admission Committee</h3>
+                <ul class="faculty-list">
+                    <li class="faculty-item coordinator">
+                        <span class="faculty-name">Smt. Mallika N</span>
+                        <span class="role-badge coordinator-badge">Co-ordinator</span>
+                    </li>
+                    <li class="faculty-item">
+                        <span class="faculty-name">Sri. Rahul</span>
+                    </li>
+                    <li class="faculty-item">
+                        <span class="faculty-name">Sri. Praveen C Kulkarni</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <h3 class="activity-title">11. Internal Quality Assurance Cell (IQAC)</h3>
+                <ul class="faculty-list">
+                    <li class="faculty-item coordinator">
+                        <span class="faculty-name">Sri Praveen C Kulkarni</span>
+                        <span class="role-badge coordinator-badge">Co-ordinator</span>
+                    </li>
+                    <li class="faculty-item">
+                        <span class="faculty-name">Dr. Padmaja Shetty</span>
+                    </li>
+                    <li class="faculty-item">
+                        <span class="faculty-name">Dr. Roopa K</span>
+                    </li>
+                    <li class="faculty-item">
+                        <span class="faculty-name">Smt. Mallika N</span>
+                    </li>
+                    <li class="faculty-item">
+                        <span class="faculty-name">Sri Rahul</span>
+                    </li>
+                    <li class="faculty-item">
+                        <span class="faculty-name">Smt. Akshatha Marathe</span>
+                    </li>
+                    <li class="faculty-item">
+                        <span class="faculty-name">Smt. Sukanya Shetty</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <h3 class="activity-title">12. Cultural Association</h3>
+                <ul class="faculty-list">
+                    <li class="faculty-item coordinator">
+                        <span class="faculty-name">Smt. Mallika N</span>
+                        <span class="role-badge coordinator-badge">Co-ordinator</span>
+                    </li>
+                    <li class="faculty-item">
+                        <span class="faculty-name">Sri. Aravinda Prasad</span>
+                    </li>
+                    <li class="faculty-item">
+                        <span class="faculty-name">Ms. Deepthi S</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <h3 class="activity-title">13. Sports & Games</h3>
+                <ul class="faculty-list">
+                    <li class="faculty-item coordinator">
+                        <span class="faculty-name">Sri. Aravinda Prasad K</span>
+                        <span class="role-badge coordinator-badge">Co-ordinator</span>
+                    </li>
+                    <li class="faculty-item">
+                        <span class="faculty-name">Sri Taranath</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <h3 class="activity-title">14. N.S.S. Programme Officers</h3>
+                <ul class="faculty-list">
+                    <li class="faculty-item">
+                        <span class="faculty-name">Smt Mallika N</span>
+                        <!-- <span class="role-badge">Unit-I</span> -->
+                    </li>
+                    <li class="faculty-item">
+                        <span class="faculty-name">Smt. Yashoda</span>
+                        <!-- <span class="role-badge">Unit-II</span> -->
+                    </li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <h3 class="activity-title">15. NCC</h3>
+                <ul class="faculty-list">
+                    <li class="faculty-item">
+                        <span class="faculty-name">Sri Aravinda Prasad K</span>
+                        <!-- <span class="role-badge">Unit-II</span> -->
+                    </li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <h3 class="activity-title">16. Youth Red Cross Unit</h3>
+                <ul class="faculty-list">
+                    <li class="faculty-item coordinator">
+                        <span class="faculty-name">Ms Pallavi Prabhu</span>
+                        <span class="role-badge coordinator-badge">Co-ordinator</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <h3 class="activity-title">17. Anti-Women's Harassment Cell</h3>
+                <ul class="faculty-list">
+                    <li class="faculty-item coordinator">
+                        <span class="faculty-name">Smt. Sukanya S Shetty</span>
+                        <span class="role-badge coordinator-badge">Co-ordinator</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <h3 class="activity-title">18. Career Guidance & Placement Cell</h3>
+                <ul class="faculty-list">
+                    <li class="faculty-item coordinator">
+                        <span class="faculty-name">Sri Rahul</span>
+                        <span class="role-badge coordinator-badge">Co-ordinator</span>
+                    </li>
+                    <li class="faculty-item">
+                        <span class="faculty-name">Dr. Vidya Bhat</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <h3 class="activity-title">19. Parent Teacher Association</h3>
+                <ul class="faculty-list">
+                    <li class="faculty-item coordinator">
+                        <span class="faculty-name">Smt. Akshatha Marathe</span>
+                        <span class="role-badge coordinator-badge">Secretary</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <h3 class="activity-title">20. Certificate Course</h3>
+                <ul class="faculty-list">
+                    <li class="faculty-item coordinator">
+                        <span class="faculty-name">Ms. Shilpa Ghosh</span>
+                        <span class="role-badge coordinator-badge">Co-ordinator</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <h3 class="activity-title">21. Time Table Committee</h3>
+                <ul class="faculty-list">
+                    <li class="faculty-item coordinator">
+                        <span class="faculty-name">Smt. Akshatha Marathe</span>
+                        <span class="role-badge coordinator-badge">Co-ordinator</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <h3 class="activity-title">22. Alumni Association</h3>
+                <ul class="faculty-list">
+                    <li class="faculty-item coordinator">
+                        <span class="faculty-name">Smt. Mallika N</span>
+                        <span class="role-badge coordinator-badge">Co-ordinator</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <h3 class="activity-title">23. Mid-Day Meal Committee</h3>
+                <ul class="faculty-list">
+                    <li class="faculty-item coordinator">
+                        <span class="faculty-name">Sri. Aravinda Prasad K</span>
+                        <span class="role-badge coordinator-badge">Co-ordinator</span>
+                    </li>
+                    <li class="faculty-item">
+                        <span class="faculty-name">Sri Rahul</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <h3 class="activity-title">24. Website Updating Committee</h3>
+                <ul class="faculty-list">
+                    <li class="faculty-item coordinator">
+                        <span class="faculty-name">Smt. Akshatha Marathe</span>
+                        <span class="role-badge coordinator-badge">Co-ordinator</span>
+                    </li>
+                    <li class="faculty-item">
+                        <span class="faculty-name">Sri Praveen C Kulkarni</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <h3 class="activity-title">25. Grievances Redressal Cell</h3>
+                <ul class="faculty-list">
+                    <li class="faculty-item coordinator">
+                        <span class="faculty-name">Dr. Vidya Bhat</span>
+                        <span class="role-badge coordinator-badge">Co-ordinator</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <h3 class="activity-title">26. Mobile Locker Facility In-charge</h3>
+                <ul class="faculty-list">
+                    <li class="faculty-item coordinator">
+                        <span class="faculty-name">Smt. Sukanya S Shetty</span>
+                        <span class="role-badge coordinator-badge">Co-ordinator</span>
+                    </li>
+                    <li class="faculty-item">
+                        <span class="faculty-name">Smt. Mallika N</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <h3 class="activity-title">27. Staff Council</h3>
+                <ul class="faculty-list">
+                    <li class="faculty-item coordinator">
+                        <span class="faculty-name">Dr. Padmaja Shetty</span>
+                        <span class="role-badge coordinator-badge">Secretary</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <h3 class="activity-title">28. College Social Media In-charge</h3>
+                <ul class="faculty-list">
+                    <li class="faculty-item coordinator">
+                        <span class="faculty-name">Sri Santhosh Shetty</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="header">
+                <h1 class="title">SRI DHAVALA COLLEGE</h1>
+                <div class="description">
+                    <p>Moodabidri - 574227, Moodabidri Taluk, D.K.District, Karnataka</p>
+                    <p>Managed by Shree Moodubidire Digambar Jain Vidyavardhaka Sangha®, Moodabidri</p>
+                    <p>Recognized under section 2(f) and 12(B) of UGC Act 1956, Affiliated to Mangalore University</p>
+                    <span class="badge">Re-accredited by NAAC with Grade B++ (CGPA 2.81)</span>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="section">
+                    <h3>Get in Touch</h3>
+                    <div class="contact-item">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                        <div>
+                            <b>Principal</b><br>
+                            Sri Dhavala College<br>
+                            Moodabidri-574227
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        <div>
+                            <b>Phone</b><br>
+                            +91 8258 200243
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                        <div>
+                            <b>Email</b><br>
+                            sridhavalacollege1979@gmail.com
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Quick Links</h3>
+                    <ul class="links">
+                        <li><a href="#programs">PROGRAMS</a></li>
+                        <li><a href="#academics">ACADEMICS</a></li>
+                        <li><a href="#facilities">FACILITIES</a></li>
+                        <li><a href="#iqac">IQAC</a></li>
+                        <li><a href="#staff">OUR STAFF</a></li>
+                        <li><a href="#activities">ACTIVITIES</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Follow Us</h3>
+                    <div class="social">
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom">
+                <p>&copy; 2025 Sri Dhavala College, Moodabidri. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Script.js"></script>
+</body>
+</html>

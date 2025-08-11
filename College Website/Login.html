@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Portal - Student Login</title>
+    <link rel="stylesheet" href="Style.css">
+    <style>
+        .login{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 2rem;
+            width: 100vw;
+            padding: 0;
+        }
+
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 1.5rem;
+            background: white;
+            border-radius: 16px;
+            padding: 48px 40px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 40px;
+            width: auto;
+        }
+
+        .logo p {
+            color: #1e40af;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+
+        .form-group {
+            margin-bottom: 24px;
+            position: relative;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 16px 16px 16px 16px;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            font-size: 16px;
+            color: #1e293b;
+            background: transparent;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+
+        .form-group input:focus {
+            border-color: #1e40af;
+            border-width: 2px;
+            padding: 15px 15px 15px 15px;
+        }
+
+        .form-group input:focus + .form-label,
+        .form-group input:not(:placeholder-shown) + .form-label {
+            top: -8px;
+            left: 12px;
+            font-size: 12px;
+            color: #1e40af;
+            background: white;
+            padding: 0 4px;
+        }
+
+        .form-label {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            color: #64748b;
+            font-size: 16px;
+            font-weight: 400;
+            pointer-events: none;
+            transition: all 0.2s ease;
+            background: transparent;
+        }
+
+        .form-group input::placeholder {
+            color: transparent;
+        }
+
+        .signin-btn {
+            width: 100%;
+            background: #1e40af;
+            color: white;
+            border: none;
+            padding: 16px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-bottom: 24px;
+        }
+
+        .signin-btn:hover {
+            background: #1d4ed8;
+        }
+
+        .signin-btn:active {
+            transform: translateY(1px);
+        }
+
+        .signin-btn:disabled {
+            background: #94a3b8;
+            cursor: not-allowed;
+        }
+
+        .forgot-password {
+            display: block;
+            text-align: center;
+            color: #1e40af;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 32px;
+            transition: color 0.2s ease;
+        }
+
+        .forgot-password:hover {
+            color: #1d4ed8;
+        }
+
+        .divider {
+            text-align: center;
+            margin-bottom: 24px;
+            position: relative;
+        }
+
+        .divider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #e2e8f0;
+        }
+
+        .divider span {
+            background: white;
+            padding: 0 16px;
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        .register-btn {
+            width: 100%;
+            background: transparent;
+            color: #1e40af;
+            border: 1px solid #1e40af;
+            padding: 16px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+
+        .register-btn:hover {
+            background: #1e40af;
+            color: white;
+        }
+
+        @media (max-width: 480px) {
+            .login-container {
+                padding: 32px 24px;
+                margin: 10px;
+            }
+            
+            .logo h1 {
+                font-size: 28px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+
+            <div class="logo-section">
+                <div class="logo">
+                    <img src="images/dhavala-logo.jpg" alt="fff">
+                </div>
+                <p class="college-name">Sri Dhavala College</p>
+            </div>
+            
+            <nav class="nav-container">
+                <div class="desktop-nav">
+                    <div class="nav-item">
+                        <a href="Index.html" class="nav-link">Home</a>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="Login.html" class="nav-link">Login</a>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#" class="nav-link has-dropdown" data-dropdown="about">About</a>
+                        <div class="dropdown" id="about">
+                            <a href="About.html" class="dropdown-item">About Us</a>
+                            <a href="PrincipalMsg.html" class="dropdown-item">Principal Message</a>
+                            <a href="History.html" class="dropdown-item">College History</a>
+                            <a href="#" class="dropdown-item">Governing Council</a>
+                            <a href="Management.html" class="dropdown-item">Our Management</a>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#" class="nav-link has-dropdown" data-dropdown="facilities">Facilities</a>
+                        <div class="dropdown" id="facilities">
+                            <a href="#" class="dropdown-item">Academic Facilities</a>
+                            <a href="#" class="dropdown-item">Infrastructural Facilities</a>
+                            <a href="#" class="dropdown-item">Other Facilities</a>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#" class="nav-link has-dropdown" data-dropdown="academics">Academics</a>
+                        <div class="dropdown" id="academics">
+                            <a href="Cources.html" class="dropdown-item">Courses Offered</a>
+                            <a href="Academi&ECA.html" class="dropdown-item">Academic & Extracurricular Activities</a>
+                            <a href="#" class="dropdown-item">Annual Magazine - "Prathibha"</a>
+                            <a href="#" class="dropdown-item">Certificate Courses</a>
+                            <a href="Rules.html" class="dropdown-item">College Rules & Regulations</a>
+                            <a href="TimeTable.html" class="dropdown-item">Time Table</a>
+                            <a href="Mentors.html" class="dropdown-item">Mentors</a>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#" class="nav-link">IQAC</a>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#" class="nav-link has-dropdown" data-dropdown="staff">Our Staffs</a>
+                        <div class="dropdown" id="staff">
+                            <a href="Teach.html" class="dropdown-item">Teaching Staff</a>
+                            <a href="Nonteaching.html" class="dropdown-item">Non-Teaching Staff</a>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#" class="nav-link">Activities</a>
+                    </div>
+
+                    <div class="nav-item">
+                        <a href="Contact.html" class="nav-link">Contact Us</a>
+                    </div>
+                </div>
+                
+                <div class="mobile-toggle" id="mobileToggle">
+                    <div class="abc"></div>
+                    <div class="abc"></div>
+                    <div class="abc"></div>
+                </div>
+            </nav>
+        </div>
+        
+        <!-- Mob Navigation -->
+        <div class="mobile-nav" id="mobileNav">
+            <div class="mobile-nav-item">
+                <a href="Index.html" class="mobile-nav-link">Home</a>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <a href="Login.html" class="mobile-nav-link">Login</a>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link" data-mobile-dropdown="mobile-about">About <span>▼</span></a>
+                <div class="mobile-dropdown" id="mobile-about">
+                    <a href="About.html" class="mobile-dropdown-item">About Us</a>
+                    <a href="PrincipalMsg.html" class="mobile-dropdown-item">Principal Message</a>
+                    <a href="History.html" class="mobile-dropdown-item">College History</a>
+                    <a href="#" class="mobile-dropdown-item">Governing Council</a>
+                    <a href="Management.html" class="mobile-dropdown-item">Our Management</a>
+                </div>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link" data-mobile-dropdown="mobile-facilities">Facilities <span>▼</span></a>
+                <div class="mobile-dropdown" id="mobile-facilities">
+                    <a href="#" class="mobile-dropdown-item">Academic Facilities</a>
+                    <a href="#" class="mobile-dropdown-item">Infrastructural Facilities</a>
+                    <a href="#" class="mobile-dropdown-item">Other Facilities</a>
+                </div>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link" data-mobile-dropdown="mobile-academics">Academics <span>▼</span></a>
+                <div class="mobile-dropdown" id="mobile-academics">
+                    <a href="Cources.html" class="mobile-dropdown-item">Courses Offered</a>
+                    <a href="Academi&ECA.html" class="mobile-dropdown-item">Academic & Extracurricular Activities</a>
+                    <a href="#" class="mobile-dropdown-item">Annual Magazine - "Prathibha"</a>
+                    <a href="#" class="mobile-dropdown-item">Certificate Courses</a>
+                    <a href="Rules.html" class="mobile-dropdown-item">College Rules & Regulations</a>
+                    <a href="TimeTable.html" class="mobile-dropdown-item">Time Table</a>
+                    <a href="Mentors.html" class="mobile-dropdown-item">Mentors</a>
+                </div>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link">IQAC</a>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link" data-mobile-dropdown="mobile-staff">Our Staffs <span>▼</span></a>
+                <div class="mobile-dropdown" id="mobile-staff">
+                    <a href="Teach.html" class="mobile-dropdown-item">Teaching Staff</a>
+                    <a href="Nonteaching.html" class="mobile-dropdown-item">Non-Teaching Staff</a>
+                </div>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link">Activities</a>
+            </div>
+
+            
+            <div class="mobile-nav-item">
+                <a href="Contact.html" class="mobile-nav-link">Contact Us</a>
+            </div>       
+        </div>
+    </header>
+
+
+    <div class="login">
+        <div class="login-container">
+            <div class="logo">
+                <p>Sign In</p>
+            </div>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <input type="text" id="regNo" name="regNo" placeholder=" " required>
+                    <label for="regNo" class="form-label">Registration Number</label>
+                </div>
+                
+                <div class="form-group">
+                    <input type="password" id="password" name="password" placeholder=" " required>
+                    <label for="password" class="form-label">Password</label>
+                </div>
+                
+                <button type="submit" class="signin-btn">Sign In</button>
+            </form>
+            
+            <a href="#" class="forgot-password">Forgot Password?</a>
+            
+           
+            <p> <span>New to College Portal?</span></p> 
+        
+            
+            <a href="#" class="register-btn">Register Now</a>
+        </div>
+    </div>
+
+    <script type="module" src="Script.js"></script>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const regNo = document.getElementById('regNo').value;
+            const password = document.getElementById('password').value;
+            
+            if (regNo && password) {
+                const btn = document.querySelector('.signin-btn');
+                const originalText = btn.textContent;
+                btn.textContent = 'Signing In...';
+                btn.disabled = true;
+                
+                
+            }
+        });
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Non Teaching Staff</title>
+    <link rel="stylesheet" href="Style.css">
+    <style>
+       
+        .header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+
+        .staff-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .staff-card {
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+        }
+
+        .staff-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            background-color: #ddd;
+        }
+
+        .staff-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 5px;
+        }
+
+        .staff-department {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .staff-contact {
+            font-size: 0.95rem;
+            color: #777;
+        }
+
+        @media (max-width: 600px) {
+            .staff-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+
+            <div class="logo-section">
+                <div class="logo">
+                    <img src="images/dhavala-logo.jpg" alt="fff">
+                </div>
+                <p class="college-name">Sri Dhavala College</p>
+            </div>
+            
+            <nav class="nav-container">
+                <div class="desktop-nav">
+                    <div class="nav-item">
+                        <a href="Index.html" class="nav-link">Home</a>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="Login.html" class="nav-link">Login</a>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#" class="nav-link has-dropdown" data-dropdown="about">About</a>
+                        <div class="dropdown" id="about">
+                            <a href="About.html" class="dropdown-item">About Us</a>
+                            <a href="PrincipalMsg.html" class="dropdown-item">Principal Message</a>
+                            <a href="History.html" class="dropdown-item">College History</a>
+                            <a href="#" class="dropdown-item">Governing Council</a>
+                            <a href="Management.html" class="dropdown-item">Our Management</a>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#" class="nav-link has-dropdown" data-dropdown="facilities">Facilities</a>
+                        <div class="dropdown" id="facilities">
+                            <a href="#" class="dropdown-item">Academic Facilities</a>
+                            <a href="#" class="dropdown-item">Infrastructural Facilities</a>
+                            <a href="#" class="dropdown-item">Other Facilities</a>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#" class="nav-link has-dropdown" data-dropdown="academics">Academics</a>
+                        <div class="dropdown" id="academics">
+                            <a href="Cources.html" class="dropdown-item">Courses Offered</a>
+                            <a href="Academi&ECA.html" class="dropdown-item">Academic & Extracurricular Activities</a>
+                            <a href="#" class="dropdown-item">Annual Magazine - "Prathibha"</a>
+                            <a href="#" class="dropdown-item">Certificate Courses</a>
+                            <a href="Rules.html" class="dropdown-item">College Rules & Regulations</a>
+                            <a href="TimeTable.html" class="dropdown-item">Time Table</a>
+                            <a href="Mentors.html" class="dropdown-item">Mentors</a>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#" class="nav-link">IQAC</a>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#" class="nav-link has-dropdown" data-dropdown="staff">Our Staffs</a>
+                        <div class="dropdown" id="staff">
+                            <a href="Teach.html" class="dropdown-item">Teaching Staff</a>
+                            <a href="Nonteaching.html" class="dropdown-item">Non-Teaching Staff</a>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#" class="nav-link">Activities</a>
+                    </div>
+
+                    <div class="nav-item">
+                        <a href="Contact.html" class="nav-link">Contact Us</a>
+                    </div>
+                </div>
+                
+                <div class="mobile-toggle" id="mobileToggle">
+                    <div class="abc"></div>
+                    <div class="abc"></div>
+                    <div class="abc"></div>
+                </div>
+            </nav>
+        </div>
+        
+        <!-- Mob Navigation -->
+        <div class="mobile-nav" id="mobileNav">
+            <div class="mobile-nav-item">
+                <a href="Index.html" class="mobile-nav-link">Home</a>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <a href="Login.html" class="mobile-nav-link">Login</a>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link" data-mobile-dropdown="mobile-about">About <span>▼</span></a>
+                <div class="mobile-dropdown" id="mobile-about">
+                    <a href="About.html" class="mobile-dropdown-item">About Us</a>
+                    <a href="PrincipalMsg.html" class="mobile-dropdown-item">Principal Message</a>
+                    <a href="History.html" class="mobile-dropdown-item">College History</a>
+                    <a href="#" class="mobile-dropdown-item">Governing Council</a>
+                    <a href="Management.html" class="mobile-dropdown-item">Our Management</a>
+                </div>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link" data-mobile-dropdown="mobile-facilities">Facilities <span>▼</span></a>
+                <div class="mobile-dropdown" id="mobile-facilities">
+                    <a href="#" class="mobile-dropdown-item">Academic Facilities</a>
+                    <a href="#" class="mobile-dropdown-item">Infrastructural Facilities</a>
+                    <a href="#" class="mobile-dropdown-item">Other Facilities</a>
+                </div>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link" data-mobile-dropdown="mobile-academics">Academics <span>▼</span></a>
+                <div class="mobile-dropdown" id="mobile-academics">
+                    <a href="Cources.html" class="mobile-dropdown-item">Courses Offered</a>
+                    <a href="Academi&ECA.html" class="mobile-dropdown-item">Academic & Extracurricular Activities</a>
+                    <a href="#" class="mobile-dropdown-item">Annual Magazine - "Prathibha"</a>
+                    <a href="#" class="mobile-dropdown-item">Certificate Courses</a>
+                    <a href="Rules.html" class="mobile-dropdown-item">College Rules & Regulations</a>
+                    <a href="TimeTable.html" class="mobile-dropdown-item">Time Table</a>
+                    <a href="Mentors.html" class="mobile-dropdown-item">Mentors</a>
+                </div>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link">IQAC</a>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link" data-mobile-dropdown="mobile-staff">Our Staffs <span>▼</span></a>
+                <div class="mobile-dropdown" id="mobile-staff">
+                    <a href="Teach.html" class="mobile-dropdown-item">Teaching Staff</a>
+                    <a href="Nonteaching.html" class="mobile-dropdown-item">Non-Teaching Staff</a>
+                </div>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link">Activities</a>
+            </div>
+
+            
+            <div class="mobile-nav-item">
+                <a href="Contact.html" class="mobile-nav-link">Contact Us</a>
+            </div>       
+        </div>
+    </header>
+
+
+    <div class="body">  
+        <h2>Non-Teaching Staff</h2>
+
+        <section class="staff-container">
+            <div class="staff-card">
+                <img src="" alt="Photo Placeholder">
+                <div class="staff-name">Sri Aravinda Prasad K</div>
+                <div class="staff-department">Department of Physical Education</div>
+            </div>
+
+            <div class="staff-card">
+                <img src="" alt="Photo Placeholder">
+                <div class="staff-name">Smt. Chitralatha</div>
+                <div class="staff-department">College Library</div>
+            </div>
+
+            <div class="staff-card">
+                <img src="" alt="Photo Placeholder">
+                <div class="staff-name">Smt. Nagaveni</div>
+                <div class="staff-department">College Library</div>
+            </div>
+                
+            <div class="staff-card">
+                <img src="" alt="Photo Placeholder">
+                <div class="staff-name">Ms. Chaithanya</div>
+                <div class="staff-department">Computer Applications Lab</div>
+            </div>
+
+            <div class="staff-card">
+                <img src="" alt="Photo Placeholder">
+                <div class="staff-name">Smt. Susheela</div>
+                <div class="staff-department">College Office</div>
+            </div>
+
+            <div class="staff-card">
+                <img src="" alt="Photo Placeholder">
+                <div class="staff-name">Smt. Prathibha Shetty</div>
+                <div class="staff-department">College Office</div>
+            </div>
+
+            <div class="staff-card">
+                <img src="" alt="Photo Placeholder">
+                <div class="staff-name">Sri. Chandraprabha</div>
+                <div class="staff-department">College Office</div>
+            </div>
+
+            <div class="staff-card">
+                <img src="" alt="Photo Placeholder">
+                <div class="staff-name">Smt. Rajeshwari</div>
+                <div class="staff-department">College Office</div>
+            </div>
+
+            <div class="staff-card">
+                <img src="" alt="Photo Placeholder">
+                <div class="staff-name">Smt. Divya Jain</div>
+                <div class="staff-department">College Office</div>
+            </div>
+
+            <div class="staff-card">
+                <img src="" alt="Photo Placeholder">
+                <div class="staff-name">Sri Yashodhara</div>
+                <div class="staff-department">College Office</div>
+            </div>
+
+            <div class="staff-card">
+                <img src="" alt="Photo Placeholder">
+                <div class="staff-name">Sri Ashlesha</div>
+                <div class="staff-department">College Office</div>
+            </div>
+
+            <div class="staff-card">
+                <img src="" alt="Photo Placeholder">
+                <div class="staff-name">Smt. Yashoda</div>
+                <div class="staff-department">College Office</div>
+                </div>
+        </section>
+    </div>
+    <script src="Script.js"></script>
+</body>
+</html>

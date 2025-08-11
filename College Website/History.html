@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Dhavala College</title>
+    <link rel="stylesheet" href="Style.css">
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+       
+        .year {
+            font-weight: 600;
+            color: rgb(16, 62, 161);
+        }
+
+        .highlight {
+            font-weight: 600;
+            color: rgba(34, 139, 34, 1);
+        }
+
+        .content {
+            padding: 50px 0;
+        }
+
+        .content img {
+            width: 100%;
+            max-width: 405px;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px auto;
+            display: block;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .content p {
+            margin-bottom: 20px;
+            font-size: 1rem;
+            text-align: justify;
+            color: rgba(68, 68, 68, 1);
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 0 40px;
+            }
+
+            .header-content {
+                flex-wrap: nowrap;
+            }
+
+            .hero {
+                padding: 80px 0;
+            }
+
+            .hero h2 {
+                font-size: 2.8rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .content {
+                padding: 60px 0;
+            }
+
+            .content p {
+                font-size: 1.1rem;
+                margin-bottom: 25px;
+            }
+
+            nav ul {
+                flex-wrap: nowrap;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .hero {
+                padding: 100px 0;
+            }
+
+            .hero h2 {
+                font-size: 3.2rem;
+            }
+
+            .content {
+                padding: 80px 0;
+            }
+
+            .content img {
+                float: left;
+                margin: 0 30px 20px 0;
+                max-width: 350px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                padding: 0 60px;
+            }
+
+            .content p {
+                font-size: 1.15rem;
+                line-height: 1.7;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+
+            <div class="logo-section">
+                <div class="logo">
+                    <img src="images/dhavala-logo.jpg" alt="fff">
+                </div>
+                <p class="college-name">Sri Dhavala College</p>
+            </div>
+            
+            <nav class="nav-container">
+                <div class="desktop-nav">
+                    <div class="nav-item">
+                        <a href="Index.html" class="nav-link">Home</a>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="Login.html" class="nav-link">Login</a>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#" class="nav-link has-dropdown" data-dropdown="about">About</a>
+                        <div class="dropdown" id="about">
+                            <a href="About.html" class="dropdown-item">About Us</a>
+                            <a href="PrincipalMsg.html" class="dropdown-item">Principal Message</a>
+                            <a href="History.html" class="dropdown-item">College History</a>
+                            <a href="#" class="dropdown-item">Governing Council</a>
+                            <a href="Management.html" class="dropdown-item">Our Management</a>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#" class="nav-link has-dropdown" data-dropdown="facilities">Facilities</a>
+                        <div class="dropdown" id="facilities">
+                            <a href="#" class="dropdown-item">Academic Facilities</a>
+                            <a href="#" class="dropdown-item">Infrastructural Facilities</a>
+                            <a href="#" class="dropdown-item">Other Facilities</a>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#" class="nav-link has-dropdown" data-dropdown="academics">Academics</a>
+                        <div class="dropdown" id="academics">
+                            <a href="Cources.html" class="dropdown-item">Courses Offered</a>
+                            <a href="Academi&ECA.html" class="dropdown-item">Academic & Extracurricular Activities</a>
+                            <a href="#" class="dropdown-item">Annual Magazine - "Prathibha"</a>
+                            <a href="#" class="dropdown-item">Certificate Courses</a>
+                            <a href="Rules.html" class="dropdown-item">College Rules & Regulations</a>
+                            <a href="TimeTable.html" class="dropdown-item">Time Table</a>
+                            <a href="Mentors.html" class="dropdown-item">Mentors</a>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#" class="nav-link">IQAC</a>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#" class="nav-link has-dropdown" data-dropdown="staff">Our Staffs</a>
+                        <div class="dropdown" id="staff">
+                            <a href="Teach.html" class="dropdown-item">Teaching Staff</a>
+                            <a href="Nonteaching.html" class="dropdown-item">Non-Teaching Staff</a>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#" class="nav-link">Activities</a>
+                    </div>
+
+                    <div class="nav-item">
+                        <a href="Contact.html" class="nav-link">Contact Us</a>
+                    </div>
+                </div>
+                
+                <div class="mobile-toggle" id="mobileToggle">
+                    <div class="abc"></div>
+                    <div class="abc"></div>
+                    <div class="abc"></div>
+                </div>
+            </nav>
+        </div>
+        
+        <!-- Mob Navigation -->
+        <div class="mobile-nav" id="mobileNav">
+            <div class="mobile-nav-item">
+                <a href="Index.html" class="mobile-nav-link">Home</a>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <a href="Login.html" class="mobile-nav-link">Login</a>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link" data-mobile-dropdown="mobile-about">About <span>▼</span></a>
+                <div class="mobile-dropdown" id="mobile-about">
+                    <a href="About.html" class="mobile-dropdown-item">About Us</a>
+                    <a href="PrincipalMsg.html" class="mobile-dropdown-item">Principal Message</a>
+                    <a href="History.html" class="mobile-dropdown-item">College History</a>
+                    <a href="#" class="mobile-dropdown-item">Governing Council</a>
+                    <a href="Management.html" class="mobile-dropdown-item">Our Management</a>
+                </div>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link" data-mobile-dropdown="mobile-facilities">Facilities <span>▼</span></a>
+                <div class="mobile-dropdown" id="mobile-facilities">
+                    <a href="#" class="mobile-dropdown-item">Academic Facilities</a>
+                    <a href="#" class="mobile-dropdown-item">Infrastructural Facilities</a>
+                    <a href="#" class="mobile-dropdown-item">Other Facilities</a>
+                </div>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link" data-mobile-dropdown="mobile-academics">Academics <span>▼</span></a>
+                <div class="mobile-dropdown" id="mobile-academics">
+                    <a href="Cources.html" class="mobile-dropdown-item">Courses Offered</a>
+                    <a href="Academi&ECA.html" class="mobile-dropdown-item">Academic & Extracurricular Activities</a>
+                    <a href="#" class="mobile-dropdown-item">Annual Magazine - "Prathibha"</a>
+                    <a href="#" class="mobile-dropdown-item">Certificate Courses</a>
+                    <a href="Rules.html" class="mobile-dropdown-item">College Rules & Regulations</a>
+                    <a href="TimeTable.html" class="mobile-dropdown-item">Time Table</a>
+                    <a href="Mentors.html" class="mobile-dropdown-item">Mentors</a>
+                </div>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link">IQAC</a>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link" data-mobile-dropdown="mobile-staff">Our Staffs <span>▼</span></a>
+                <div class="mobile-dropdown" id="mobile-staff">
+                    <a href="Teach.html" class="mobile-dropdown-item">Teaching Staff</a>
+                    <a href="Nonteaching.html" class="mobile-dropdown-item">Non-Teaching Staff</a>
+                </div>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link">Activities</a>
+            </div>
+
+            
+            <div class="mobile-nav-item">
+                <a href="Contact.html" class="mobile-nav-link">Contact Us</a>
+            </div>       
+        </div>
+    </header>
+
+
+    <div class="container">
+        
+        <main class="content">
+            <img src="https://via.placeholder.com/405x170/f0f8f0/228B22?text=Campus+Image" alt="Campus Image">
+
+            <p>Sri Dhavala College was established in <span class="year">1979</span> with the lofty ideal of providing meaningful and need based education to the youth of Moodbidri and surrounding areas. The college is managed by <span class="highlight">Sri Moodbidri Digambara Jain Vidyavardhaka Sangha®</span> which has a long tradition of over a century, serving the cause of education. Presently, it runs five educational institutions, from primary to degree level.</p>
+
+            <p>Prior to 1979 the Management had institutions providing education up to pre-university level only. However there was a persistent demand from the public to upgrade the PU College into a full-fledged degree college. The Management also had a great desire to start a first grade college in Moodbidri. Hence, under the able leadership of its President <span class="highlight">Padmavibhushana Dr.D.Veerendra Heggade</span>, the Dharmadhikari of Sri Kshetra Dharmasthala, it took a bold decision to start a degree college from the academic year 1979-80. In this regard, the University Affiliation Committee from Mysore University visited the college on <span class="year">7th May 1979</span>. Consequently, with the approval of the university, the new college was formally inaugurated on <span class="year">20th July 1979</span> by Dr.K.S.Hegde, the then Vice Chancellor of Mysore University.</p>
+
+            <p>The new college was named as <span class="highlight">Sri Dhavala College</span> - Dhavala means bright or pure. It also represents the name of three sacred Jaina texts, <span class="highlight">Dhavala, Jaya Dhavala and Maha Dhavala</span>. The original copies of these texts are preserved in the Jaina Mutt.</p>
+
+            <p>Temporarily, the degree classes were conducted in the Jain PU College building. The Management had already acquired a site of <span class="highlight">5.10 acres</span> for the new college which was a benevolent donation of His Holiness Sri Charukeerthi Bhattaraka Swamiji of Sri Jain Mutt, Moodbidri. The foundation stone for the new building was laid in the divine presence of His Holiness Sri Sri 108 Yelacharya Muni Maharaj on <span class="year">3rd March 1982</span> and it was completed in 1984. The new and spacious college building in the serene surroundings was inaugurated on <span class="year">20th September 1985</span> by Sri Ramakrishna Hegde, the then Chief Minister of Karnataka. A number of his cabinet colleagues were also present on that occasion.</p>
+
+            <p>From 1979, the college was affiliated to Mysore University. In 1982, when Mangalore University was established, it was affiliated to Mangalore University. The college received permanent affiliation in the academic year <span class="year">1997-98</span>. It is also recognized as a <span class="highlight">minority institution</span> by the Government.</p>
+
+            <p>Initially, the entire expenditure of the college had to be met by the Management. In <span class="year">1984</span> the college came under the grant-in-aid scheme of the Government of Karnataka and it got UGC recognition under section 2(f) of the UGC Act in <span class="year">1995</span> and under section 12-B in <span class="year">1998</span>. The college celebrated <span class="highlight">Silver Jubilee</span> in the year <span class="year">2003-2004</span> and various building projects were initiated to meet the needs of increasing student strength and to provide more facilities. Projects like new library, conversion of old library into conference hall, computer lab, staff room, ladies' hostel, college canteen, audio visual room, additional class rooms and washrooms were completed with grants.</p>
+
+            <p>The college got accredited with Grade 'B' by NAAC in <span class="year">2004</span>, reaccredited with CGPA of 2.43 in <span class="year">2010</span>, 2.22 in <span class="year">2016</span> and 2.81 in <span class="year">2022</span>.</p>
+
+            <p>Initially, the college offered <span class="highlight">B.A and B.COM</span>. Later, <span class="highlight">B.C.A</span> and <span class="highlight">B.B.M</span> were introduced in <span class="year">2003</span> and <span class="year">2006</span>. B.COM(Vocational) was started in <span class="year">2014</span>, and another B.C.A. in <span class="year">2023</span>. Current student strength is <span class="highlight">354</span>. The college also offers several add-on courses.</p>
+
+            <p>The students have consistently performed well in academics and co-curricular activities. So far, <span class="highlight">seven students have obtained ranks</span> in university exams. Many have excelled in sports and cultural activities as well.</p>
+
+            <p>The college continues to fulfill its mission of providing quality, value-based education and has several plans to grow further in service of society.</p>
+        </main>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="header">
+                <h1 class="title">SRI DHAVALA COLLEGE</h1>
+                <div class="description">
+                    <p>Moodabidri - 574227, Moodabidri Taluk, D.K.District, Karnataka</p>
+                    <p>Managed by Shree Moodubidire Digambar Jain Vidyavardhaka Sangha®, Moodabidri</p>
+                    <p>Recognized under section 2(f) and 12(B) of UGC Act 1956, Affiliated to Mangalore University</p>
+                    <span class="badge">Re-accredited by NAAC with Grade B++ (CGPA 2.81)</span>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="section">
+                    <h3>Get in Touch</h3>
+                    <div class="contact-item">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                        <div>
+                            <b>Principal</b><br>
+                            Sri Dhavala College<br>
+                            Moodabidri-574227
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        <div>
+                            <b>Phone</b><br>
+                            +91 8258 200243
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                        <div>
+                            <b>Email</b><br>
+                            sridhavalacollege1979@gmail.com
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Quick Links</h3>
+                    <ul class="links">
+                        <li><a href="#programs">PROGRAMS</a></li>
+                        <li><a href="#academics">ACADEMICS</a></li>
+                        <li><a href="#facilities">FACILITIES</a></li>
+                        <li><a href="#iqac">IQAC</a></li>
+                        <li><a href="#staff">OUR STAFF</a></li>
+                        <li><a href="#activities">ACTIVITIES</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Follow Us</h3>
+                    <div class="social">
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom">
+                <p>&copy; 2025 Sri Dhavala College, Moodabidri. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Script.js"></script>
+</body>
+</html>
